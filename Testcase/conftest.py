@@ -20,7 +20,7 @@ def setup(request):
         chrome_options = webdriver.ChromeOptions()
         chrome_options.add_argument("--start-maximized")
         # chrome_options.add_argument("headless")
-        service_obj = Service("/Users/Public/chromedriver-win64/chromedriver.exe")
+        service_obj = Service("../Drivers/chromedriver-win64/chromedriver.exe")
         driver = webdriver.Chrome(service=service_obj, options=chrome_options)
     elif browser == "IE":
         service_obj = Service("/Users/DeySubha/Downloads/edgedriver_win64/msedgedriver.exe")

@@ -6,7 +6,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 
-from Util.BaseClass import BaseClass
+from GITDemo.Util.BaseClass import BaseClass
 from selenium.webdriver.common.by import By
 
 
