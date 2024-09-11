@@ -34,4 +34,5 @@ class TestDemoApp(BaseClass):
         self.driver.switch_to.window(handle2[0])
         self.driver.find_element(By.XPATH,"//div/textarea[@name='IO:4ede721447a01210acd2a22f316d43d5']").send_keys("TestApp Automation")
         self.driver.find_element(By.XPATH,"//button[@name='submit_button']").click()
+        print("Testcases Ran")
         time.sleep(5)
