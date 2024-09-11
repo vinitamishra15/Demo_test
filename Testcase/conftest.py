@@ -2,7 +2,8 @@ import time
 
 import pytest
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.service import Service as ServiceChrome
+from webdriver_manager.chrome import ChromeDriverManager
 
 
 def pytest_addoption(parser):
@@ -20,8 +21,8 @@ def setup(request):
         chrome_options = webdriver.ChromeOptions()
         chrome_options.add_argument("--start-maximized")
         # chrome_options.add_argument("headless")
-        service_obj = Service("Drivers/chromedriver-win64/chromedriver.exe")
-        driver = webdriver.Chrome(service=service_obj, options=chrome_options)
+        #service_obj = Service("Drivers/chromedriver-win64/chromedriver.exe")
+        driver = webdriver.Chrome(service=ServiceChrome(ChromeDriverManager().install()), options=chrome_options)
     elif browser == "IE":
         service_obj = Service("/Users/DeySubha/Downloads/edgedriver_win64/msedgedriver.exe")
         driver = webdriver.Edge(service=service_obj)
